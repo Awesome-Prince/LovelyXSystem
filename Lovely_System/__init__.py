@@ -33,7 +33,7 @@ if ENV:
     ENFORCERS = list(int(x) for x in os.environ.get("ENFORCERS", "").split())
     MONGO_DB_URL = os.environ.get("MONGO_DB_URL")
     Lovely_logs = int(os.environ.get("Lovely_logs"))
-    Lovely_approved_logs = int(os.environ.get("Lovely_approved_Logs"))
+    Lovely_approved_logs = int(os.environ.get("Lovely_approved_logs"))
     GBAN_MSG_LOGS = int(os.environ.get("GBAN_MSG_LOGS"))
     BOT_TOKEN = os.environ.get("BOT_TOKEN")
 else:
