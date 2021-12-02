@@ -120,10 +120,10 @@ def system_cmd(
         args["pattern"] = re.compile(r"[\?\.!]" + pattern)
     if allow_sibyl and allow_enforcer:
         args["from_users"] = ENFORCERS
-    elif allow_inspectors and allow_sibyl:
+    elif allow_inspectors and allow_Lovely:
         args["from_users"] = INSPECTORS
     else:
-        args["from_users"] = SIBYL
+        args["from_users"] = Lovely
     if force_reply:
         args["func"] = lambda e: e.is_reply
     return events.NewMessage(**args)
