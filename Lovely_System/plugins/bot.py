@@ -158,7 +158,7 @@ async def inline_handler(event):
     split = query.split(" ", 1)
     if event.query.user_id not in INSPECTORS:
         result = builder.article(
-            "Sibyl System", text="You don't have access to this cmd."
+            "Lovely System", text="You don't have access to this cmd."
         )
         await event.answer([result])
         return
