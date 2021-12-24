@@ -21,10 +21,10 @@
    ],
    "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-python"
+      "url": "https://heroku.com/deploy?template=https://github.com/Lovelygf/LovelyXSystem"
     },
     {
-      "url": "https://github.com/Lovelygf/heroku-buildpack-ffmpeg-latest"
+      "url": "heroku/python"
     }
   ],  
    "env": {
