@@ -1,0 +1,68 @@
+
+{
+      "name": "Lovely Scanner",
+      "description": "Telegram Spam handling System.",
+      "logo": "https://telegra.ph/file/821d3e03f45048f038a6e.jpg",
+      "keywords": [
+         "telegram",
+         "Spam",
+         "handling",
+         "System",
+         "Lovely Scanner"
+      ],   
+   "repository": "https://github.com/lovelygf/LovelyXSystem",
+   "addons": [
+      {
+         "options": {
+            "version": "12"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python"
+    },
+    {
+      "url": "https://github.com/Lovelygf/heroku-buildpack-ffmpeg-latest"
+    }
+  ],  
+   "env": {
+      "BOT_TOKEN": {
+         "description": "Your bot token. Get one from @BotFather duh",
+         "required": true,
+         "value": ""
+      },
+      "API_ID_KEY": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },
+      "API_HASH_KEY": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": ""
+      },    
+      "STRING_SESSION": {
+         "description": " Get ur String session.",
+         "required": false,
+         "value": ""
+      },      
+      "Lovely": {
+         "description": "Put Owners id here.",
+         "required": true,
+         "value": ""
+      },
+      "INSPECTORS": {
+         "description": " Ins.",
+         "required": true,
+         "value": ""
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+        "value": ""
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
+        "required": false
+      },
