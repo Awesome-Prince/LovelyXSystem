@@ -22,6 +22,9 @@ The base of operations of Lovely are Beneath the NONA Tower and are only accessi
 
 ------------
 
+### 💜 Host on Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LovelyGf/LovelyXSystem.git)
+
 ### Commands list
 
 You can check help using -
@@ -34,7 +37,7 @@ You can check help using -
 
 #### Development and planning
 
-Skynet is under active development and some future plans include
+ Lovely is under active development and some future plans include
 
 - Gif responses
 
