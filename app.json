@@ -2,7 +2,7 @@
 {
       "name": "Lovely Scanner",
       "description": "Telegram Spam handling System.",
-      "logo": "https://telegra.ph/file/821d3e03f45048f038a6e.jpg",
+      "logo": "https://telegra.ph/file/ce3c1cb894516eda5bf26.jpg",
       "keywords": [
          "telegram",
          "Spam",
@@ -14,7 +14,7 @@
    "addons": [
       {
          "options": {
-            "version": "12"
+            "version": "26"
          },
          "plan": "heroku-postgresql"
       }
