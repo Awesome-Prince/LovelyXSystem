@@ -65,7 +65,7 @@ async def status(event):
     await msg.edit(on_string.format(Enforcer=user_status, name=sender.first_name))
 
 
-@System.on(system_cmd(pattern="Lovely stats"))
+@System.on(system_cmd(pattern="sct stats"))
 async def stats(event):
     msg = f"Processed {System.processed} messages since last restart."
     msg += f"\n{len(ENFORCERS)} Enforcers & {len(INSPECTORS)} Inspectors"
@@ -108,9 +108,9 @@ async def main():
         msg = "Few plugins failed to load:"
         for plugin in FAILED_TO_LOAD:
             msg += f"\n**{plugin}**\n\n`{FAILED_TO_LOAD[plugin]}`"
-        await System.send_message(Lovely_logs, msg)
+        await System.send_message(sct_scannerlogs, msg)
     else:
-        await System.send_message(Lovely_logs, "I'm On Love!")
+        await System.send_message(sct scanner_logs, "I'm On Love!")
     await System.run_until_disconnected()
 
 
