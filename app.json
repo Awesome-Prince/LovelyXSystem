@@ -24,7 +24,7 @@
       "url": "https://heroku.com/deploy?template=https://github.com/Lovelygf/LovelyXSystem"
     },
     {
-      "url": "heroku/python"
+      "url": "heroku/telethon"
     }
   ],  
    "env": {
