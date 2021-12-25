@@ -85,5 +85,9 @@ You can check help using -
 
 #### Credits
 
-- [Lovely Boy](https://github.com/Hodacka) : Dev
+- [Lovely Boy](https://github.com/Hodacka) : (Base)
+- [Awesome-RJ](https://GitHub.com/Awesome-RJ) : (Dev)
 
+### Spical Credits
+
+- Skynet (Base,Main)
