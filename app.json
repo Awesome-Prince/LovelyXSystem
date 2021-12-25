@@ -39,7 +39,7 @@
       },    
       "STRING_SESSION": {
          "description": " You can get this by doing python3 generatestringsession.py on Linux and Mac, If on windows just python will work.",
-         "required": false,
+         "required": true,
          "value": ""
       },      
       "Lovely": {
@@ -59,15 +59,18 @@
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+        "required": true,
         "value": ""
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
-        "required": false
+        "required": true,
+        "value": ""
       },
        "MONGO_DB_URL": {
          "description": " Put ur Mongo Db.",
-         "value": "True"
+         "required": true,
+         "value": ""
       },
       "Lovely_logs": {
       "description": "  In this group all scan request come",
@@ -81,7 +84,7 @@
       },
       "GBAN_MSG_LOGS": {
          "description": "Where to gban user, Set to None and it will send /gban in Lovely_logs",
-         "required": false,
+         "required": true,
          "value": ""
       }
       
