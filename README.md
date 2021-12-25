@@ -23,7 +23,7 @@ The base of operations of Lovely are Beneath the NONA Tower and are only accessi
 ------------
 
 ### 💜 Host on Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/LovelyGf/LovelyXSystem.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hodacka/LovelyXSystem.git)
 
 ### Commands list
 
