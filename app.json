@@ -19,13 +19,7 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "buildpacks": [
-    {
-      "url": "https://heroku.com/deploy?template=https://github.com/Lovelygf/LovelyXSystem"
-    },
-    {
-      "url": "heroku/telethon"
-    }
+
   ],  
    "env": {
       "BOT_TOKEN": {
