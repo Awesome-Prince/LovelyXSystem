@@ -49,9 +49,9 @@ You can check help using -
 
 ------------
 
-##### Trivia
-Wtf They Told About That Anime System U Just Changed To Lovely System Understand The Meaning 🖕
-#### Warning
+
+
+#### Waring
 
 > Since Warning Always come after the spell
 
