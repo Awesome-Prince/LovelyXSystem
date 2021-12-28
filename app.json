@@ -89,6 +89,11 @@
          "description": "Where to gban user, Set to None and it will send /gban in Lovely_logs",
          "required": false,
          "value": ""
+      },
+      "ENV": {.  
+        "description": "keep ENV= anything
+        "required" : false,
+        "value" : ""
       }
       
    }
