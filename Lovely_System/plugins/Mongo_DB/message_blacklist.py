@@ -1,6 +1,6 @@
 from Lovely_System import MONGO_CLIENT
 
-db = MONGO_CLIENT["Lovely"]["Main"]
+db = MONGO_CLIENT["sct scanner"]["Main"]
 
 
 async def get_blacklist():

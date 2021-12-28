@@ -1,7 +1,7 @@
 on_string = """
 ══════✭✭✭✭✭═══════
 
-𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 𝙏𝙊 𝙇𝙊𝙑𝙀𝙇𝙔 𝙎𝙔𝙎𝙏𝙀𝙈 
+𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 𝙏𝙊 SCT √ 𝙎𝙔𝙎𝙏𝙀𝙈 
 
 ══════✭✭✭✭✭═══════
 
@@ -18,7 +18,7 @@ on_string = """
 # If you still wanna change it change the regex too
 scan_request_string = """
 ╒═══「 $SCAN 」
-Lovely X Scan request!
+Sct X Scan request!
 **✯ Enforcer:** {enforcer} 
 **✯ User scanned:** {spammer}
 **✯ Reason:** `{reason}`

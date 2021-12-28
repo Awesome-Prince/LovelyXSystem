@@ -19,6 +19,6 @@ help_plus = """ Here is Help for Bancodes  :-
 ✯ • {LYx17} - CYBER THREATENING / CYBER BULLY
 ✯ • {LYx18} - NSFW SPAMMER
 
-Powered By  Lovely Support
+Powered By  sct Support
 """
 __plugin_name__ = "BanCodes" 
