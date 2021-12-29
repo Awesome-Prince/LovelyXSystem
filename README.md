@@ -1,4 +1,4 @@
-# Lovely X System
+# ⓣⓤⓢⓤⓚⓐⓢⓐ  ⓢⓒⓐⓝⓝⓔⓡ
 
 > A proactive judgement system for group chats.
 
