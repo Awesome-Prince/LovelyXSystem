@@ -98,7 +98,7 @@ async def auto_gban_request(event):
                     else f"Occurred in Private Chat - {event.chat.title}"
                 )
                 logmsg = f"""$AUTOSCAN\n**Scanned user:** [{event.from_id.user_id}](tg://user?id={event.from_id.user_id})\n**Reason:** 0x{c}\n**Chat:** {link}\n**Hue Color:** Yellow-green\n**Message:** {event.text}"""
-                await System.send_message(Sibyl_logs, logmsg)
+                await System.send_message(Lovely_logs, logmsg)
                 System.processed += 1
                 System.processing -= 1
                 return
