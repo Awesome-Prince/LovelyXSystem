@@ -1,7 +1,8 @@
-from Lovely_System import System, system_cmd
 import os
-import sys
 import subprocess
+import sys
+
+from Lovely_System import System, system_cmd
 
 
 @System.on(system_cmd(pattern=r"Lovely gitpull"))

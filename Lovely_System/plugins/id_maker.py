@@ -1,6 +1,8 @@
-from Lovely_System import system_cmd, System
-from PIL import Image, ImageDraw, ImageFont
 import os
+
+from PIL import Image, ImageDraw, ImageFont
+
+from Lovely_System import System, system_cmd
 
 
 @System.on(system_cmd(pattern=r"get_id"))

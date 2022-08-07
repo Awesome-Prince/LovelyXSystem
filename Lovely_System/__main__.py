@@ -1,16 +1,17 @@
+import asyncio
+import importlib
+import logging
+import time
+
 from Lovely_System import (
-    System,
-    system_cmd,
-    make_collections,
-    INSPECTORS,
     ENFORCERS,
+    INSPECTORS,
     Lovely_logs,
+    System,
+    make_collections,
+    system_cmd,
 )
 from Lovely_System.strings import on_string
-import logging
-import importlib
-import asyncio
-import time
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
@@ -79,7 +80,11 @@ async def stats(event):
     await event.reply(msg)
 
 
-@System.on(system_cmd(pattern=r"help", allow_slash=False, allow_inspectors=True, allow_enforcer=True))
+@System.on(
+    system_cmd(
+        pattern=r"help", allow_slash=False, allow_inspectors=True, allow_enforcer=True
+    )
+)
 async def send_help(event):
     try:
         help_for = event.text.split(" ", 1)[1].lower()
@@ -115,4 +120,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(main()) 
+    asyncio.get_event_loop().run_until_complete(main())

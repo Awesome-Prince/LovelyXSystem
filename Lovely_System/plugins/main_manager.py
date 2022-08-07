@@ -1,15 +1,8 @@
-from Lovely_System import Lovely_logs, ENFORCERS, Lovely, INSPECTORS
-from Lovely_System.strings import (
-    scan_request_string,
-    reject_string,
-    proof_string,
-    forced_scan_string,
-)
-from Lovely_System import System, system_cmd
-from Lovely_System.utils import seprate_flags, Flag
-
 import re
 
+from Lovely_System import ENFORCERS, INSPECTORS, Lovely, Lovely_logs, System, system_cmd
+from Lovely_System.strings import forced_scan_string, reject_string, scan_request_string
+from Lovely_System.utils import Flag, seprate_flags
 
 url_regex = re.compile("(http(s)?://)?t.me/(c/)?(\w+)/(\d+)")
 
@@ -34,7 +27,7 @@ def get_data_from_url(url: str) -> tuple:
         Flag(
             "-f",
             "Force approve a scan. Using this with scan will auto approve it",
-            "store_true"
+            "store_true",
         ),
         Flag(
             "-u",
@@ -45,21 +38,16 @@ def get_data_from_url(url: str) -> tuple:
             "Original Sender. Using this will gban orignal sender instead of forwarder.",
             "store_true",
         ),
-        Flag(
-            "-r",
-            "Reason to scan message with.",
-            nargs="*",
-            default=None
-        )
+        Flag("-r", "Reason to scan message with.", nargs="*", default=None),
     ],
-    allow_unknown=True
+    allow_unknown=True,
 )
 async def scan(event, flags):
     replied = await event.get_reply_message()
     if flags.r:
         reason = " ".join(flags.r)
     else:
-        split = event.text.split(' ', 1)
+        split = event.text.split(" ", 1)
         if len(split) == 1:
             return
         reason = seprate_flags(split[1]).strip()
@@ -161,6 +149,7 @@ async def scan(event, flags):
         executer.id, target, reason, msg.id, executer, message=replied.text
     )
 
+
 @System.on(system_cmd(pattern=r"re(vive|vert|store) ", allow_inspectors=True))
 async def revive(event):
     try:
@@ -183,11 +172,12 @@ async def revive(event):
 async def logs(event):
     await System.send_file(event.chat_id, "log.txt")
 
+
 @System.command(
-    e = system_cmd(pattern=r"approve", allow_inspectors=True, force_reply=True),
+    e=system_cmd(pattern=r"approve", allow_inspectors=True, force_reply=True),
     group="main",
     help="Approve a scan request.",
-    flags=[Flag("-or", "Overwrite reason", nargs="*")]
+    flags=[Flag("-or", "Overwrite reason", nargs="*")],
 )
 async def approve(event, flags):
     replied = await event.get_reply_message()
@@ -233,7 +223,7 @@ async def approve(event, flags):
                 await replied.edit(
                     re.sub(
                         "(\*\*)?(Scan)? ?Reason:(\*\*)? (`([^`]*)`|.*)",
-                        f'**Scan Reason:** `{reason}`',
+                        f"**Scan Reason:** `{reason}`",
                         replied.text,
                     )
                 )
@@ -284,7 +274,9 @@ async def approve(event, flags):
                         reply_to=int(orig.group(2)),
                     )
                 except:
-                    await event.reply('Failed to notify enforcer about scan being accepted.')
+                    await event.reply(
+                        "Failed to notify enforcer about scan being accepted."
+                    )
 
 
 @System.on(system_cmd(pattern=r"reject", allow_inspectors=True, force_reply=True))

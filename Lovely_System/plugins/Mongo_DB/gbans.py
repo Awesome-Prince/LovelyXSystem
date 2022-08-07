@@ -1,6 +1,7 @@
-from Lovely_System import MONGO_CLIENT
-from typing import Optional, Dict, Union
 from datetime import datetime
+from typing import Dict, Optional, Union
+
+from Lovely_System import MONGO_CLIENT
 
 db = MONGO_CLIENT["Lovely"]["Main"]
 

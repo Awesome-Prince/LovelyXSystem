@@ -1,9 +1,7 @@
 import re
 import shlex
-
-from io import StringIO
-from typing import Dict, Tuple
 from argparse import ArgumentParser
+from io import StringIO
 
 FLAG_REGEX = re.compile(r"-\w+")
 
@@ -35,11 +33,17 @@ class FlagParser:
         self.parser = ArgumentParser(add_help=False, description=desc)
         for flag in flags:
             self.parser.add_argument(*flag.args, **flag.kwargs)
-        self.parser.add_argument("-h", "--help", help="Display this message.", action="store_true")
+        self.parser.add_argument(
+            "-h", "--help", help="Display this message.", action="store_true"
+        )
 
     def parse(self, text, known=False):
         text = shlex.split(text)
-        return self.parser.parse_known_args(text) if known else self.parser.parse_args(text)
+        return (
+            self.parser.parse_known_args(text)
+            if known
+            else self.parser.parse_args(text)
+        )
 
     def get_help(self):
         string = StringIO()

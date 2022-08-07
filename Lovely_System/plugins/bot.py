@@ -1,14 +1,13 @@
-from Lovely_System import System, session, INSPECTORS, ENFORCERS, Lovely_logs
-from Lovely_System.strings import proof_string, scan_request_string, reject_string
-from Lovely_System.plugins.Mongo_DB.gbans import get_gban, get_gban_by_proofid
-import Lovely_System.plugins.Mongo_DB.bot_settings as db
-
-from telethon import events, custom
-
-from typing import Union
-import logging
-import re
 import asyncio
+import re
+from typing import Union
+
+from telethon import custom, events
+
+import Lovely_System.plugins.Mongo_DB.bot_settings as db
+from Lovely_System import ENFORCERS, INSPECTORS, System, session
+from Lovely_System.plugins.Mongo_DB.gbans import get_gban, get_gban_by_proofid
+from Lovely_System.strings import proof_string, reject_string, scan_request_string
 
 data = []
 DATA_LOCK = asyncio.Lock()

@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Optional, Union
 
 API_ID: int = 12345
 API_HASH: str = "XYZ"

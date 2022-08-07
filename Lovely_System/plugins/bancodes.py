@@ -21,4 +21,4 @@ help_plus = """ Here is Help for Bancodes  :-
 
 Powered By  Lovely Support
 """
-__plugin_name__ = "BanCodes" 
+__plugin_name__ = "BanCodes"

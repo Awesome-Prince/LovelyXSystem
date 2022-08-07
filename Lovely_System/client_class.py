@@ -1,23 +1,20 @@
+from functools import wraps
+
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
-from functools import wraps
-from .strings import (
-    scan_approved_string,
-    bot_gban_string,
-    proof_string,
-    forced_scan_string,
-)
-from .utils import FlagParser, ParseError
 
 from Lovely_System import (
-    Lovely_logs,
-    Lovely_approved_logs,
-    GBAN_MSG_LOGS,
-    BOT_TOKEN,
-    API_ID_KEY,
     API_HASH_KEY,
+    API_ID_KEY,
+    BOT_TOKEN,
+    GBAN_MSG_LOGS,
+    Lovely_approved_logs,
+    Lovely_logs,
 )
-from Lovely_System.plugins.Mongo_DB.gbans import update_gban, delete_gban
+from Lovely_System.plugins.Mongo_DB.gbans import delete_gban, update_gban
+
+from .strings import bot_gban_string, scan_approved_string
+from .utils import FlagParser, ParseError
 
 
 class LovelyClient(TelegramClient):
@@ -44,6 +41,7 @@ class LovelyClient(TelegramClient):
                 self.groups[group] = []
             self.groups[group].append(func.__name__)
             parser = FlagParser(flags, help)
+
             @wraps(func)
             async def flags_decorator(event):
                 split = event.text.split(" ", 1)
@@ -53,8 +51,10 @@ class LovelyClient(TelegramClient):
                     if allow_unknown:
                         flags, unknown = parser.parse(split[1], known=True)
                         if unknown:
-                            if any([x for x in unknown if '-' in x]):
-                                parser.parse(split[1]) # Trigger the error because unknown args are not allowed to have - in them.
+                            if any([x for x in unknown if "-" in x]):
+                                parser.parse(
+                                    split[1]
+                                )  # Trigger the error because unknown args are not allowed to have - in them.
                     else:
                         flags = parser.parse(split[1])
                 except ParseError as exce:
@@ -66,6 +66,7 @@ class LovelyClient(TelegramClient):
                     await event.reply(f"{parser.get_help()}")
                     return
                 return await func(event, flags)
+
             self.add_event_handler(flags_decorator, e)
             return flags_decorator
 

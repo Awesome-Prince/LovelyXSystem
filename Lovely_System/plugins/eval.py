@@ -1,8 +1,9 @@
-import sys
-from Lovely_System import system_cmd, System
-from io import StringIO
-import traceback
 import inspect
+import sys
+import traceback
+from io import StringIO
+
+from Lovely_System import System, system_cmd
 
 # Thanks to stackoverflow for existing https://stackoverflow.com/questions/3906232/python-get-the-print-output-in-an-exec-statement
 
